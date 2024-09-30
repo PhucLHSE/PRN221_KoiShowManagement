@@ -88,40 +88,50 @@ namespace KoiShowManagement.RazorWebApp.Pages.AnimalPage
         {
             if (!ModelState.IsValid)
             {
-                // Reload animal varieties and gender lists if there's a validation error
-                var animalVarieties = await _animalVarietyService.GetAll();
-                if (animalVarieties.Status == Const.SUCCESS_READ_CODE && animalVarieties.Data != null)
-                {
-                    var varieties = animalVarieties.Data as IEnumerable<AnimalVariety>;
-                    ViewData["VarietyId"] = new SelectList(varieties, "VarietyId", "VarietyName");
-                }
-                else
-                {
-                    ViewData["VarietyId"] = new SelectList(Enumerable.Empty<AnimalVariety>(), "VarietyId", "VarietyName");
-                }
-
-                ViewData["GenderList"] = new SelectList(Enum.GetValues(typeof(Gender)).Cast<Gender>());
                 return Page();
             }
 
-            try
-            {
-                await _animalService.Save(Animal);
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!await AnimalExists(Animal.AnimalId))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
+            await _animalService.Save(Animal);
             return RedirectToPage("./Index");
         }
+        //public async Task<IActionResult> OnPostAsync()
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        // Reload animal varieties and gender lists if there's a validation error
+        //        var animalVarieties = await _animalVarietyService.GetAll();
+        //        if (animalVarieties.Status == Const.SUCCESS_READ_CODE && animalVarieties.Data != null)
+        //        {
+        //            var varieties = animalVarieties.Data as IEnumerable<AnimalVariety>;
+        //            ViewData["VarietyId"] = new SelectList(varieties, "VarietyId", "VarietyName");
+        //        }
+        //        else
+        //        {
+        //            ViewData["VarietyId"] = new SelectList(Enumerable.Empty<AnimalVariety>(), "VarietyId", "VarietyName");
+        //        }
+
+        //        ViewData["GenderList"] = new SelectList(Enum.GetValues(typeof(Gender)).Cast<Gender>());
+        //        return Page();
+        //    }
+
+        //    try
+        //    {
+        //        await _animalService.Save(Animal);
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!await AnimalExists(Animal.AnimalId))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
+
+        //    return RedirectToPage("./Index");
+        //}
 
         private async Task<bool> AnimalExists(int id)
         {

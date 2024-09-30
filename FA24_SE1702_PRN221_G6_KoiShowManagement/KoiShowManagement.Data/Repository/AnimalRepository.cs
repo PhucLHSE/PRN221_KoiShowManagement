@@ -21,5 +21,9 @@ namespace KoiShowManagement.Data.Repository
                  .ToListAsync();*/
             return await _context.Animals.Include(p => p.Variety).ToListAsync();
         }
+        public async Task<Animal> GetByIdAnimalAsync(int id)
+        {
+            return await _context.Animals.Include(p => p.Variety).FirstOrDefaultAsync(p => p.AnimalId == id);
+        }
     }
 }

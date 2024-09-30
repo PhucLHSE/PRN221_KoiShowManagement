@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cggVCoNhOs0=",
+  "dgSpecHash": "lGsSXja/omE=",
   "success": true,
-  "projectFilePath": "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.RazorWebApp\\KoiShowManagement.RazorWebApp.csproj",
+  "projectFilePath": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.RazorWebApp\\KoiShowManagement.RazorWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

@@ -79,9 +79,11 @@ namespace KoiShowManagement.Service
 
                 int result = -1;
 
-                var animalTmp = this.GetById(animal.AnimalId);
+                var animalTmp = _unitOfWork.AnimalRepository.GetById(animal.AnimalId);
+                //var animalTmp = this.GetById(animal.AnimalId);
 
-                if(animalTmp.Result.Status == Const.SUCCESS_READ_CODE)
+                if (animalTmp != null)
+                //if (animalTmp.Result.Status == Const.SUCCESS_READ_CODE)
                 {
                     result = await _unitOfWork.AnimalRepository.UpdateAsync(animal);
 
@@ -104,7 +106,7 @@ namespace KoiShowManagement.Service
                     }
                     else
                     {
-                        return new ServiceResult(Const.FAIL_CREATE_CODE, Const.FAIL_CREATE_MSG);
+                        return new ServiceResult(Const.FAIL_CREATE_CODE, Const.FAIL_CREATE_MSG, animal);
                     }
                 }
             }

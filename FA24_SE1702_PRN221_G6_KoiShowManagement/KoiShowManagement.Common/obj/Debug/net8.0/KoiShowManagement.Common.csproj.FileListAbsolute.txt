@@ -9,3 +9,15 @@ D:\University\PRN221_Fall2024\PRN221\Project\Source\FA24_SE1702_PRN221_G6_KoiSho
 D:\University\PRN221_Fall2024\PRN221\Project\Source\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.Common\obj\Debug\net8.0\refint\KoiShowManagement.Common.dll
 D:\University\PRN221_Fall2024\PRN221\Project\Source\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.Common\obj\Debug\net8.0\KoiShowManagement.Common.pdb
 D:\University\PRN221_Fall2024\PRN221\Project\Source\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.Common\obj\Debug\net8.0\ref\KoiShowManagement.Common.dll
+D:\University\PRN221_Fall2024\Git\PRN221_KoiShowManagement\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.Common\bin\Debug\net8.0\KoiShowManagement.Common.deps.json
+D:\University\PRN221_Fall2024\Git\PRN221_KoiShowManagement\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.Common\bin\Debug\net8.0\KoiShowManagement.Common.dll
+D:\University\PRN221_Fall2024\Git\PRN221_KoiShowManagement\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.Common\bin\Debug\net8.0\KoiShowManagement.Common.pdb
+D:\University\PRN221_Fall2024\Git\PRN221_KoiShowManagement\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.Common\obj\Debug\net8.0\KoiShowManagement.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\University\PRN221_Fall2024\Git\PRN221_KoiShowManagement\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.Common\obj\Debug\net8.0\KoiShowManagement.Common.AssemblyInfoInputs.cache
+D:\University\PRN221_Fall2024\Git\PRN221_KoiShowManagement\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.Common\obj\Debug\net8.0\KoiShowManagement.Common.AssemblyInfo.cs
+D:\University\PRN221_Fall2024\Git\PRN221_KoiShowManagement\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.Common\obj\Debug\net8.0\KoiShowManagement.Common.csproj.CoreCompileInputs.cache
+D:\University\PRN221_Fall2024\Git\PRN221_KoiShowManagement\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.Common\obj\Debug\net8.0\KoiShowManagement.Common.sourcelink.json
+D:\University\PRN221_Fall2024\Git\PRN221_KoiShowManagement\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.Common\obj\Debug\net8.0\KoiShowManagement.Common.dll
+D:\University\PRN221_Fall2024\Git\PRN221_KoiShowManagement\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.Common\obj\Debug\net8.0\refint\KoiShowManagement.Common.dll
+D:\University\PRN221_Fall2024\Git\PRN221_KoiShowManagement\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.Common\obj\Debug\net8.0\KoiShowManagement.Common.pdb
+D:\University\PRN221_Fall2024\Git\PRN221_KoiShowManagement\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.Common\obj\Debug\net8.0\ref\KoiShowManagement.Common.dll

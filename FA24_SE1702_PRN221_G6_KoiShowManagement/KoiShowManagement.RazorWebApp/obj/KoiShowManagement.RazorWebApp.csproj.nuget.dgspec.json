@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.RazorWebApp\\KoiShowManagement.RazorWebApp.csproj": {}
+    "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.RazorWebApp\\KoiShowManagement.RazorWebApp.csproj": {}
   },
   "projects": {
-    "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Common\\KoiShowManagement.Common.csproj": {
+    "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Common\\KoiShowManagement.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Common\\KoiShowManagement.Common.csproj",
+        "projectUniqueName": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Common\\KoiShowManagement.Common.csproj",
         "projectName": "KoiShowManagement.Common",
-        "projectPath": "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Common\\KoiShowManagement.Common.csproj",
+        "projectPath": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Common\\KoiShowManagement.Common.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Common\\obj\\",
+        "outputPath": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,14 +69,14 @@
         }
       }
     },
-    "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Data\\KoiShowManagement.Data.csproj": {
+    "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Data\\KoiShowManagement.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Data\\KoiShowManagement.Data.csproj",
+        "projectUniqueName": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Data\\KoiShowManagement.Data.csproj",
         "projectName": "KoiShowManagement.Data",
-        "projectPath": "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Data\\KoiShowManagement.Data.csproj",
+        "projectPath": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Data\\KoiShowManagement.Data.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Data\\obj\\",
+        "outputPath": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -98,8 +98,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Common\\KoiShowManagement.Common.csproj": {
-                "projectPath": "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Common\\KoiShowManagement.Common.csproj"
+              "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Common\\KoiShowManagement.Common.csproj": {
+                "projectPath": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Common\\KoiShowManagement.Common.csproj"
               }
             }
           }
@@ -162,14 +162,14 @@
         }
       }
     },
-    "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.RazorWebApp\\KoiShowManagement.RazorWebApp.csproj": {
+    "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.RazorWebApp\\KoiShowManagement.RazorWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.RazorWebApp\\KoiShowManagement.RazorWebApp.csproj",
+        "projectUniqueName": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.RazorWebApp\\KoiShowManagement.RazorWebApp.csproj",
         "projectName": "KoiShowManagement.RazorWebApp",
-        "projectPath": "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.RazorWebApp\\KoiShowManagement.RazorWebApp.csproj",
+        "projectPath": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.RazorWebApp\\KoiShowManagement.RazorWebApp.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.RazorWebApp\\obj\\",
+        "outputPath": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.RazorWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -191,11 +191,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Data\\KoiShowManagement.Data.csproj": {
-                "projectPath": "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Data\\KoiShowManagement.Data.csproj"
+              "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Data\\KoiShowManagement.Data.csproj": {
+                "projectPath": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Data\\KoiShowManagement.Data.csproj"
               },
-              "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Service\\KoiShowManagement.Service.csproj": {
-                "projectPath": "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Service\\KoiShowManagement.Service.csproj"
+              "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Service\\KoiShowManagement.Service.csproj": {
+                "projectPath": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Service\\KoiShowManagement.Service.csproj"
               }
             }
           }
@@ -249,14 +249,14 @@
         }
       }
     },
-    "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Service\\KoiShowManagement.Service.csproj": {
+    "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Service\\KoiShowManagement.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Service\\KoiShowManagement.Service.csproj",
+        "projectUniqueName": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Service\\KoiShowManagement.Service.csproj",
         "projectName": "KoiShowManagement.Service",
-        "projectPath": "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Service\\KoiShowManagement.Service.csproj",
+        "projectPath": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Service\\KoiShowManagement.Service.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Service\\obj\\",
+        "outputPath": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -278,11 +278,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Common\\KoiShowManagement.Common.csproj": {
-                "projectPath": "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Common\\KoiShowManagement.Common.csproj"
+              "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Common\\KoiShowManagement.Common.csproj": {
+                "projectPath": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Common\\KoiShowManagement.Common.csproj"
               },
-              "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Data\\KoiShowManagement.Data.csproj": {
-                "projectPath": "D:\\University\\PRN221_Fall2024\\PRN221\\Project\\Source\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Data\\KoiShowManagement.Data.csproj"
+              "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Data\\KoiShowManagement.Data.csproj": {
+                "projectPath": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Data\\KoiShowManagement.Data.csproj"
               }
             }
           }

@@ -24,39 +24,51 @@ namespace KoiShowManagement.RazorWebApp.Pages.AnimalPage
 
         public Animal Animal { get; set; } = default!;
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public async Task<IActionResult> OnGetAsync(int id)
         {
-            //    if (id == null)
-            //    {
-            //        return NotFound();
-            //    }
             if (id == null)
             {
-                return NotFound();
+                return null;
             }
 
-            //    var animal = await _context.Animals.FirstOrDefaultAsync(m => m.AnimalId == id);
-            var animal = await _animalService.GetById(id.Value);
-            // Ensure the returned data is of type Animal
-            if (animal.Data is Animal animalResult)
-            {
-                Animal = animalResult; // Assign to Animal
-            }
-            else
-            {
-                return NotFound(); // Handle unexpected type
-            }
-
-            //    if (animal == null)
-            //    {
-            //        return NotFound();
-            //    }
-            //    else
-            //    {
-            //        Animal = animal;
-            //    }
+            var animalResult = _animalService.GetById(id);
+            Animal = animalResult.Result.Data as Animal;
 
             return Page();
         }
+        //public async Task<IActionResult> OnGetAsync(int? id)
+        //{
+        //    //    if (id == null)
+        //    //    {
+        //    //        return NotFound();
+        //    //    }
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    //    var animal = await _context.Animals.FirstOrDefaultAsync(m => m.AnimalId == id);
+        //    var animal = await _animalService.GetById(id.Value);
+        //    // Ensure the returned data is of type Animal
+        //    if (animal.Data is Animal animalResult)
+        //    {
+        //        Animal = animalResult; // Assign to Animal
+        //    }
+        //    else
+        //    {
+        //        return NotFound(); // Handle unexpected type
+        //    }
+
+        //    //    if (animal == null)
+        //    //    {
+        //    //        return NotFound();
+        //    //    }
+        //    //    else
+        //    //    {
+        //    //        Animal = animal;
+        //    //    }
+
+        //    return Page();
+        //}
     }
 }
