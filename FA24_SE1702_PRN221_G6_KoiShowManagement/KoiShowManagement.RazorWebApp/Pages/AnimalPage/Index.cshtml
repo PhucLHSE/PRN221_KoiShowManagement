@@ -1,0 +1,102 @@
+﻿@page
+@model KoiShowManagement.RazorWebApp.Pages.AnimalPage.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Animal[0].AnimalName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Animal[0].Size)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Animal[0].BirthDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Animal[0].Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Animal[0].Weight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Animal[0].AnimalDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Animal[0].CountryOfOrigin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Animal[0].HealthStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Animal[0].Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Animal[0].Rating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Animal[0].IsDeleted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Animal[0].Variety.VarietyName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Animal) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnimalDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryOfOrigin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HealthStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                    @Html.CheckBoxFor(modelItem => item.IsDeleted, new { disabled = "disabled" })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Variety.VarietyName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.AnimalId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.AnimalId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.AnimalId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

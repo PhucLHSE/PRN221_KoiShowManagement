@@ -1,0 +1,90 @@
+﻿@page
+@model KoiShowManagement.RazorWebApp.Pages.AnimalPage.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Animal</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Animal.AnimalId" />
+            <div class="form-group">
+                <label asp-for="Animal.AnimalName" class="control-label"></label>
+                <input asp-for="Animal.AnimalName" class="form-control" />
+                <span asp-validation-for="Animal.AnimalName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Animal.VarietyId" class="control-label"></label>
+                <select asp-for="Animal.VarietyId" class="form-control" asp-items="ViewBag.VarietyId"></select>
+                <span asp-validation-for="Animal.VarietyId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Animal.Size" class="control-label"></label>
+                <input asp-for="Animal.Size" class="form-control" />
+                <span asp-validation-for="Animal.Size" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Animal.BirthDate" class="control-label"></label>
+                <input asp-for="Animal.BirthDate" class="form-control" />
+                <span asp-validation-for="Animal.BirthDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Animal.Image" class="control-label"></label>
+                <input asp-for="Animal.Image" class="form-control" />
+                <span asp-validation-for="Animal.Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Animal.Weight" class="control-label"></label>
+                <input asp-for="Animal.Weight" class="form-control" />
+                <span asp-validation-for="Animal.Weight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Animal.AnimalDescription" class="control-label"></label>
+                <input asp-for="Animal.AnimalDescription" class="form-control" />
+                <span asp-validation-for="Animal.AnimalDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Animal.CountryOfOrigin" class="control-label"></label>
+                <input asp-for="Animal.CountryOfOrigin" class="form-control" />
+                <span asp-validation-for="Animal.CountryOfOrigin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Animal.HealthStatus" class="control-label"></label>
+                <input asp-for="Animal.HealthStatus" class="form-control" />
+                <span asp-validation-for="Animal.HealthStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Animal.Gender" class="control-label"></label>
+                <input asp-for="Animal.Gender" class="form-control" />
+                <span asp-validation-for="Animal.Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Animal.Rating" class="control-label"></label>
+                <input asp-for="Animal.Rating" class="form-control" />
+                <span asp-validation-for="Animal.Rating" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <input asp-for="Animal.IsDeleted" class="form-check-input" type="checkbox" />
+                <label asp-for="Animal.IsDeleted" class="form-check-label">Is Deleted</label>
+                <span asp-validation-for="Animal.IsDeleted" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
