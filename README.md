@@ -29,6 +29,6 @@ protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
   },
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "DefaultConnection": "Data Source=VULNS-SPACE;Initial Catalog=eFastBanking;Persist Security Info=True;User ID=vulns;Password=@dm1n;Encrypt=False"
+    "DefaultConnection": ""
   }
 }

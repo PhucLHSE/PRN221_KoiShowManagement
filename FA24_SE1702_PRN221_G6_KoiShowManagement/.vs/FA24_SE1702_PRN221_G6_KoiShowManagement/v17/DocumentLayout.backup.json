@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3E2DDFDD-E6BE-4882-A7A5-738D660E898C}|KoiShowManagement.Service\\KoiShowManagement.Service.csproj|d:\\university\\prn221_fall2024\\git\\prn221_koishowmanagement\\fa24_se1702_prn221_g6_koishowmanagement\\koishowmanagement.service\\animalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E2DDFDD-E6BE-4882-A7A5-738D660E898C}|KoiShowManagement.Service\\KoiShowManagement.Service.csproj|solutionrelative:koishowmanagement.service\\animalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D26343BB-6601-48DB-8074-106D6772589A}|KoiShowManagement.RazorWebApp\\KoiShowManagement.RazorWebApp.csproj|d:\\university\\prn221_fall2024\\git\\prn221_koishowmanagement\\fa24_se1702_prn221_g6_koishowmanagement\\koishowmanagement.razorwebapp\\pages\\animalpage\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D26343BB-6601-48DB-8074-106D6772589A}|KoiShowManagement.RazorWebApp\\KoiShowManagement.RazorWebApp.csproj|solutionrelative:koishowmanagement.razorwebapp\\pages\\animalpage\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{095A0973-AAAB-4A6E-8FAE-D83BA5B1A379}|KoiShowManagement.Data\\KoiShowManagement.Data.csproj|d:\\university\\prn221_fall2024\\git\\prn221_koishowmanagement\\fa24_se1702_prn221_g6_koishowmanagement\\koishowmanagement.data\\repository\\animalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{095A0973-AAAB-4A6E-8FAE-D83BA5B1A379}|KoiShowManagement.Data\\KoiShowManagement.Data.csproj|solutionrelative:koishowmanagement.data\\repository\\animalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E2DDFDD-E6BE-4882-A7A5-738D660E898C}|KoiShowManagement.Service\\KoiShowManagement.Service.csproj|d:\\university\\prn221_fall2024\\git\\prn221_koishowmanagement\\fa24_se1702_prn221_g6_koishowmanagement\\koishowmanagement.service\\animalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E2DDFDD-E6BE-4882-A7A5-738D660E898C}|KoiShowManagement.Service\\KoiShowManagement.Service.csproj|solutionrelative:koishowmanagement.service\\animalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{095A0973-AAAB-4A6E-8FAE-D83BA5B1A379}|KoiShowManagement.Data\\KoiShowManagement.Data.csproj|d:\\university\\prn221_fall2024\\git\\prn221_koishowmanagement\\fa24_se1702_prn221_g6_koishowmanagement\\koishowmanagement.data\\dbcontext\\fa24_se1702_prn221_g6_koishowmanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -89,7 +89,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -129,20 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.RazorWebApp\\Pages\\AnimalPage\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "KoiShowManagement.RazorWebApp\\Pages\\AnimalPage\\Index.cshtml.cs",
-              "ToolTip": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.RazorWebApp\\Pages\\AnimalPage\\Index.cshtml.cs",
-              "RelativeToolTip": "KoiShowManagement.RazorWebApp\\Pages\\AnimalPage\\Index.cshtml.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T07:23:36.746Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.RazorWebApp\\Pages\\AnimalPage\\Details.cshtml",
               "RelativeDocumentMoniker": "KoiShowManagement.RazorWebApp\\Pages\\AnimalPage\\Details.cshtml",
@@ -179,7 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Details.cshtml.cs",
               "DocumentMoniker": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.RazorWebApp\\Pages\\AnimalPage\\Details.cshtml.cs",
               "RelativeDocumentMoniker": "KoiShowManagement.RazorWebApp\\Pages\\AnimalPage\\Details.cshtml.cs",
@@ -187,12 +174,11 @@
               "RelativeToolTip": "KoiShowManagement.RazorWebApp\\Pages\\AnimalPage\\Details.cshtml.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAA1wCgAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T06:53:04.458Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-19T06:53:04.458Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.RazorWebApp\\Pages\\AnimalPage\\Index.cshtml",
               "RelativeDocumentMoniker": "KoiShowManagement.RazorWebApp\\Pages\\AnimalPage\\Index.cshtml",
@@ -200,8 +186,7 @@
               "RelativeToolTip": "KoiShowManagement.RazorWebApp\\Pages\\AnimalPage\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-30T07:39:47.813Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T07:39:47.813Z"
             },
             {
               "$type": "Document",
@@ -213,8 +198,7 @@
               "RelativeToolTip": "KoiShowManagement.RazorWebApp\\Pages\\AnimalPage\\Create.cshtml.cs",
               "ViewState": "AgIAAEwAAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T07:27:38.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T07:27:38.457Z"
             },
             {
               "$type": "Document",
@@ -242,20 +226,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "AnimalService.cs",
               "DocumentMoniker": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Service\\AnimalService.cs",
               "RelativeDocumentMoniker": "KoiShowManagement.Service\\AnimalService.cs",
               "ToolTip": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Service\\AnimalService.cs",
               "RelativeToolTip": "KoiShowManagement.Service\\AnimalService.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAjwDsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAgwCQAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-26T08:01:32.788Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.RazorWebApp\\Pages\\AnimalPage\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "KoiShowManagement.RazorWebApp\\Pages\\AnimalPage\\Index.cshtml.cs",
+              "ToolTip": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.RazorWebApp\\Pages\\AnimalPage\\Index.cshtml.cs",
+              "RelativeToolTip": "KoiShowManagement.RazorWebApp\\Pages\\AnimalPage\\Index.cshtml.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T07:23:36.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "AnimalRepository.cs",
               "DocumentMoniker": "D:\\University\\PRN221_Fall2024\\Git\\PRN221_KoiShowManagement\\FA24_SE1702_PRN221_G6_KoiShowManagement\\KoiShowManagement.Data\\Repository\\AnimalRepository.cs",
               "RelativeDocumentMoniker": "KoiShowManagement.Data\\Repository\\AnimalRepository.cs",
@@ -263,8 +259,7 @@
               "RelativeToolTip": "KoiShowManagement.Data\\Repository\\AnimalRepository.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAkwBkAAABtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T07:37:13.438Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T07:37:13.438Z"
             },
             {
               "$type": "Document",
@@ -276,8 +271,7 @@
               "RelativeToolTip": "KoiShowManagement.Data\\Base\\GenericRepository.cs",
               "ViewState": "AgIAABUAAAAAAAAAAIA9wIoAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T08:14:08.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-26T08:14:08.849Z"
             },
             {
               "$type": "Document",
@@ -289,8 +283,7 @@
               "RelativeToolTip": "KoiShowManagement.Data\\DBContext\\FA24_SE1702_PRN221_G6_KoiShowManagementContext.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAA8wDIAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T07:08:42.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T07:08:42.649Z"
             },
             {
               "$type": "Document",
@@ -302,8 +295,7 @@
               "RelativeToolTip": "KoiShowManagement.Service\\AnimalVarietyService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T06:05:47.783Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-26T06:05:47.783Z"
             },
             {
               "$type": "Document",
