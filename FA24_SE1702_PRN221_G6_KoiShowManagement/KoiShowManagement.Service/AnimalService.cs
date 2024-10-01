@@ -58,7 +58,7 @@ namespace KoiShowManagement.Service
 
             #endregion Business Rule
 
-            var animal = await _unitOfWork.AnimalRepository.GetByIdAsync(AnimalId);
+            var animal = await _unitOfWork.AnimalRepository.GetByIdAnimalAsync(AnimalId);
             if (animal == null)
             {
                 return new ServiceResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG);

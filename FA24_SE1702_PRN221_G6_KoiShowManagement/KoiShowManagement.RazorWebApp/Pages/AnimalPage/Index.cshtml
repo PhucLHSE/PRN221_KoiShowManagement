@@ -86,7 +86,8 @@
                 @Html.DisplayFor(modelItem => item.Rating)
             </td>
             <td>
-                    @Html.CheckBoxFor(modelItem => item.IsDeleted, new { disabled = "disabled" })
+                @*@Html.CheckBoxFor(modelItem => item.IsDeleted, new { disabled = "disabled" })*@
+                @Html.DisplayFor(modelItem => item.IsDeleted)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Variety.VarietyName)

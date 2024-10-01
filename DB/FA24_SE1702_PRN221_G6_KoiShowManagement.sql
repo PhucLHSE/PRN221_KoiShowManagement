@@ -106,7 +106,7 @@ CREATE TABLE Animals (
     HealthStatus NVARCHAR(MAX),
     Gender INT, 
     Rating FLOAT, 
-    IsDeleted BIT DEFAULT 0,
+    IsDeleted BIT DEFAULT 0 not null,
     FOREIGN KEY (VarietyId) REFERENCES AnimalVarieties(VarietyId)
 );
 GO

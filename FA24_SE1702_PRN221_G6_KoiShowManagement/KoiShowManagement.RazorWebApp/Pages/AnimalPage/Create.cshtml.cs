@@ -28,6 +28,12 @@ namespace KoiShowManagement.RazorWebApp.Pages.AnimalPage
 
         public IActionResult OnGetAsync()
         {
+            // Initialize the Animal object with IsDeleted set to false by default
+            Animal = new Animal
+            {
+                IsDeleted = false
+            };
+
             //ViewData["VarietyId"] = new SelectList(_context.AnimalVarieties, "VarietyId", "VarietyId");
             //ViewData["VarietyId"] = new SelectList(_animalService.GetAnimalVarieties(), "VarietyId", "VarietyName");
 

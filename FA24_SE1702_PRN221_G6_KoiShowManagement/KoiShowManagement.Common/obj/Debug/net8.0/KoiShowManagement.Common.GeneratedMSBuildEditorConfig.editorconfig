@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = KoiShowManagement.Common
-build_property.ProjectDir = D:\University\PRN221_Fall2024\Git\PRN221_KoiShowManagement\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.Common\
+build_property.ProjectDir = D:\University\PRN231\Git\PRN221_KoiShowManagement\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.Common\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
