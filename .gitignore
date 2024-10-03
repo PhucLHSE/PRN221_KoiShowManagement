@@ -399,3 +399,8 @@ FodyWeavers.xsd
 
 # Ignore appsettings.json to prevent conflicts in connection strings
 appsettings.json
+
+# Ignore WPF auto-generated files
+KoiShowManagement.WPFApp/
+
+

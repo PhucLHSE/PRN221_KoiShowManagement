@@ -257,7 +257,6 @@ D:\University\PRN221_Fall2024\PRN221\Project\Source\FA24_SE1702_PRN221_G6_KoiSho
 D:\University\PRN221_Fall2024\PRN221\Project\Source\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.RazorWebApp\obj\Debug\net8.0\KoiShowManagement.RazorWebApp.genruntimeconfig.cache
 D:\University\PRN221_Fall2024\PRN221\Project\Source\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.RazorWebApp\obj\Debug\net8.0\ref\KoiShowManagement.RazorWebApp.dll
 D:\University\PRN221_Fall2024\Git\PRN221_KoiShowManagement\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.RazorWebApp\bin\Debug\net8.0\appsettings.Development.json
-D:\University\PRN221_Fall2024\Git\PRN221_KoiShowManagement\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.RazorWebApp\bin\Debug\net8.0\appsettings.json
 D:\University\PRN221_Fall2024\Git\PRN221_KoiShowManagement\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.RazorWebApp\bin\Debug\net8.0\KoiShowManagement.RazorWebApp.staticwebassets.runtime.json
 D:\University\PRN221_Fall2024\Git\PRN221_KoiShowManagement\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.RazorWebApp\bin\Debug\net8.0\KoiShowManagement.RazorWebApp.exe
 D:\University\PRN221_Fall2024\Git\PRN221_KoiShowManagement\FA24_SE1702_PRN221_G6_KoiShowManagement\KoiShowManagement.RazorWebApp\bin\Debug\net8.0\KoiShowManagement.RazorWebApp.deps.json
