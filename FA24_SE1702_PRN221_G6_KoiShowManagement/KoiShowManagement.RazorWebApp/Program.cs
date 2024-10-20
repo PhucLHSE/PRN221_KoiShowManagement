@@ -18,6 +18,9 @@ namespace KoiShowManagement.RazorWebApp
             builder.Services.AddScoped<AnimalService>();
             builder.Services.AddScoped<AnimalVarietyService>();
 
+          
+            builder.Services.AddScoped<RegistrationService>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

@@ -13,6 +13,9 @@ namespace KoiShowManagement.Data
         private FA24_SE1702_PRN221_G6_KoiShowManagementContext _unitOfWorkContext;
         private AnimalRepository _animalRepository;
         private AnimalVarietyRepository _animalVarietyRepository;
+        private RegistrationsRepository _registrationsRepository;
+        private CompetitionsRepository _competitionsRepository;
+        private UsersRepository _usersRepository;
         public UnitOfWork() 
         {
             _unitOfWorkContext ??= new FA24_SE1702_PRN221_G6_KoiShowManagementContext();
@@ -34,6 +37,29 @@ namespace KoiShowManagement.Data
                 return _animalVarietyRepository ??= new Repository.AnimalVarietyRepository(_unitOfWorkContext);
             }
         }
+        public RegistrationsRepository RegistrationsRepository
+        {
+            get
+            {
+                return _registrationsRepository ??= new Repository.RegistrationsRepository(_unitOfWorkContext);
 
+            }
+        }
+        public CompetitionsRepository CompetitionsRepository
+        {
+            get
+            {
+                return _competitionsRepository ??= new Repository.CompetitionsRepository(_unitOfWorkContext);
+
+            }
+        }
+        public UsersRepository UsersRepository
+        {
+            get
+            {
+                return _usersRepository ??= new Repository.UsersRepository(_unitOfWorkContext);
+
+            }
+        }
     }
 }
