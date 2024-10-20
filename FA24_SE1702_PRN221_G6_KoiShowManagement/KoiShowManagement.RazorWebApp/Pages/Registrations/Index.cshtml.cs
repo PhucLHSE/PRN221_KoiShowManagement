@@ -22,7 +22,7 @@ namespace KoiShowManagement.RazorWebApp.Pages.Registrations
         {
 
             Registration = (await _registrationService.GetAll()).Data as IList<Registration>;
-
+            ///
 
         }
     }
