@@ -16,6 +16,7 @@ namespace KoiShowManagement.Data
         private RegistrationsRepository _registrationsRepository;
         private CompetitionsRepository _competitionsRepository;
         private UsersRepository _usersRepository;
+        private CompetitionCategoryRepository _competitionCategoryRepository;
         public UnitOfWork() 
         {
             _unitOfWorkContext ??= new FA24_SE1702_PRN221_G6_KoiShowManagementContext();
@@ -59,6 +60,13 @@ namespace KoiShowManagement.Data
             {
                 return _usersRepository ??= new Repository.UsersRepository(_unitOfWorkContext);
 
+            }
+        }
+        public CompetitionCategoryRepository CompetitionCategoryRepository
+        {
+            get
+            {
+                return _competitionCategoryRepository ??= new Repository.CompetitionCategoryRepository(_unitOfWorkContext);
             }
         }
     }

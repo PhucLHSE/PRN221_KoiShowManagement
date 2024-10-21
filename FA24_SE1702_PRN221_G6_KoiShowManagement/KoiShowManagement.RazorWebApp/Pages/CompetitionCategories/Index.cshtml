@@ -1,0 +1,132 @@
+﻿@page
+@model KoiShowManagement.RazorWebApp.Pages.CompetitionCategories.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CompetitionCategory[0].CategoryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompetitionCategory[0].MinSize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompetitionCategory[0].MaxSize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompetitionCategory[0].MinAge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompetitionCategory[0].MaxAge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompetitionCategory[0].JudgingCriteria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompetitionCategory[0].WeightPercentageForShape)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompetitionCategory[0].WeightPercentageForColor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompetitionCategory[0].WeightPercentageForPattern)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompetitionCategory[0].RequiredHealthStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompetitionCategory[0].RequiredDocuments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompetitionCategory[0].CompetitionFee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompetitionCategory[0].MaxParticipants)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompetitionCategory[0].PrizeDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompetitionCategory[0].IsDeleted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompetitionCategory[0].Competition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompetitionCategory[0].Variety)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.CompetitionCategory) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinAge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxAge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JudgingCriteria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeightPercentageForShape)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeightPercentageForColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeightPercentageForPattern)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RequiredHealthStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RequiredDocuments)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompetitionFee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxParticipants)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrizeDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDeleted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Competition.CompetitionId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Variety.VarietyId)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CategoryId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CategoryId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CategoryId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
