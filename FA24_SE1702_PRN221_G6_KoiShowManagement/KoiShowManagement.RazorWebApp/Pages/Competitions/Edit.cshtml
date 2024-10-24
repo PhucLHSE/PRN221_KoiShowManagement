@@ -1,0 +1,120 @@
+﻿@page
+@model KoiShowManagement.RazorWebApp.Pages.Competitions.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Competition</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Competition.CompetitionId" />
+            <div class="form-group">
+                <label asp-for="Competition.CompetitionName" class="control-label"></label>
+                <input asp-for="Competition.CompetitionName" class="form-control" />
+                <span asp-validation-for="Competition.CompetitionName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition.Title" class="control-label"></label>
+                <input asp-for="Competition.Title" class="form-control" />
+                <span asp-validation-for="Competition.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition.Description" class="control-label"></label>
+                <input asp-for="Competition.Description" class="form-control" />
+                <span asp-validation-for="Competition.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition.StartDate" class="control-label"></label>
+                <input asp-for="Competition.StartDate" class="form-control" />
+                <span asp-validation-for="Competition.StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition.EndDate" class="control-label"></label>
+                <input asp-for="Competition.EndDate" class="form-control" />
+                <span asp-validation-for="Competition.EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition.Location" class="control-label"></label>
+                <input asp-for="Competition.Location" class="form-control" />
+                <span asp-validation-for="Competition.Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition.CompetitionType" class="control-label"></label>
+                <input asp-for="Competition.CompetitionType" class="form-control" />
+                <span asp-validation-for="Competition.CompetitionType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition.Status" class="control-label"></label>
+                <input asp-for="Competition.Status" class="form-control" />
+                <span asp-validation-for="Competition.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition.NumberOfParticipants" class="control-label"></label>
+                <input asp-for="Competition.NumberOfParticipants" class="form-control" />
+                <span asp-validation-for="Competition.NumberOfParticipants" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition.Image" class="control-label"></label>
+                <input asp-for="Competition.Image" class="form-control" />
+                <span asp-validation-for="Competition.Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition.ContactInfo" class="control-label"></label>
+                <input asp-for="Competition.ContactInfo" class="form-control" />
+                <span asp-validation-for="Competition.ContactInfo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition.ShapePointPercentage" class="control-label"></label>
+                <input asp-for="Competition.ShapePointPercentage" class="form-control" />
+                <span asp-validation-for="Competition.ShapePointPercentage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition.ColorPointPercentage" class="control-label"></label>
+                <input asp-for="Competition.ColorPointPercentage" class="form-control" />
+                <span asp-validation-for="Competition.ColorPointPercentage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition.PatternPointPercentage" class="control-label"></label>
+                <input asp-for="Competition.PatternPointPercentage" class="form-control" />
+                <span asp-validation-for="Competition.PatternPointPercentage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition.RulesDocument" class="control-label"></label>
+                <input asp-for="Competition.RulesDocument" class="form-control" />
+                <span asp-validation-for="Competition.RulesDocument" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition.JudgingPanel" class="control-label"></label>
+                <input asp-for="Competition.JudgingPanel" class="form-control" />
+                <span asp-validation-for="Competition.JudgingPanel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition.MaxJudges" class="control-label"></label>
+                <input asp-for="Competition.MaxJudges" class="form-control" />
+                <span asp-validation-for="Competition.MaxJudges" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Competition.IsDeleted" class="control-label"></label>
+                <input asp-for="Competition.IsDeleted" class="form-control" />
+                <span asp-validation-for="Competition.IsDeleted" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

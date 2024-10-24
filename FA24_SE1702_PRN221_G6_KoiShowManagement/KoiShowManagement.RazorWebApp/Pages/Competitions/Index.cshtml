@@ -1,0 +1,138 @@
+﻿@page
+@model KoiShowManagement.RazorWebApp.Pages.Competitions.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition[0].CompetitionName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition[0].StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition[0].EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition[0].Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition[0].CompetitionType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition[0].NumberOfParticipants)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition[0].Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition[0].ContactInfo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition[0].ShapePointPercentage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition[0].ColorPointPercentage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition[0].PatternPointPercentage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition[0].RulesDocument)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition[0].JudgingPanel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition[0].MaxJudges)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition[0].IsDeleted)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Competition) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompetitionName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompetitionType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfParticipants)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactInfo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShapePointPercentage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColorPointPercentage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatternPointPercentage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RulesDocument)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JudgingPanel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxJudges)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDeleted)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CompetitionId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CompetitionId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CompetitionId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

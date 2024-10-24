@@ -17,8 +17,8 @@ namespace KoiShowManagement.RazorWebApp
             //Dependency Injection
             builder.Services.AddScoped<AnimalService>();
             builder.Services.AddScoped<AnimalVarietyService>();
+            builder.Services.AddScoped<CompetitionService>();
 
-          
             builder.Services.AddScoped<RegistrationService>();
 
             var app = builder.Build();
