@@ -21,4 +21,8 @@
     <ProjectReference Include="..\KoiShowManagement.Service\KoiShowManagement.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
 </Project>

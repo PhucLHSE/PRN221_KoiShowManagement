@@ -46,7 +46,14 @@
             @Html.DisplayNameFor(model => model.Registration.Image)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Registration.Image)
+            @if (!string.IsNullOrEmpty(Model.Registration.Image))
+            {
+                <img src="@Model.Registration.Image" alt="Registration Image" style="max-width: 100%; height: auto;" />
+            }
+            else
+            {
+                <p>No image available</p>
+            }
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Registration.HealthStatus)
@@ -97,7 +104,7 @@
             @Html.DisplayFor(model => model.Registration.User.Email)
         </dd>
     </dl>
-    
+
     <form method="post">
         <input type="hidden" asp-for="Registration.RegistrationId" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |

@@ -60,6 +60,20 @@ namespace KoiShowManagement.RazorWebApp.Pages.Registrations
                 return Page();
             }
 
+            if (Registration.ImageFile != null)
+            {
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(Registration.ImageFile.FileName);
+                var uploadPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", fileName);
+
+                using (var fileStream = new FileStream(uploadPath, FileMode.Create))
+                {
+                    await Registration.ImageFile.CopyToAsync(fileStream);
+                }
+
+                Registration.Image = "/images/" + fileName;
+            }
+
+
             await _registrationService.Save(Registration);
             return RedirectToPage("./Index");
 
