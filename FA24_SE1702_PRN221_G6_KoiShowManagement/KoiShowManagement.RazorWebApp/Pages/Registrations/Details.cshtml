@@ -45,7 +45,14 @@
             @Html.DisplayNameFor(model => model.Registration.Image)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Registration.Image)
+            @if (!string.IsNullOrEmpty(Model.Registration.Image))
+            {
+                <img src="@Model.Registration.Image" alt="Image" style="max-width: 200px; max-height: 200px;" />
+            }
+            else
+            {
+                <p>No image available</p>
+            }
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Registration.HealthStatus)
