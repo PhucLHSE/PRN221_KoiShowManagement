@@ -23,20 +23,10 @@ namespace KoiShowManagement.Service
     {
         private readonly UnitOfWork _unitOfWork;
 
-        public CompetitionService() => _unitOfWork ??= new UnitOfWork();
-
-        //public CompetitionService() 
-        //{
-        //    _unitOfWork ??= new UnitOfWork();
-        //}
-
+        public CompetitionService() => _unitOfWork = new UnitOfWork();
 
         public async Task<ServiceResult> GetAll()
         {
-            #region Business Rule
-
-            #endregion Business Rule
-
             var competition = await _unitOfWork.CompetitionsRepository.GetAllAsync();
 
             if (competition == null)
@@ -47,16 +37,12 @@ namespace KoiShowManagement.Service
             {
                 return new ServiceResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, competition);
             }
+
         }
 
         public async Task<ServiceResult> GetById(int id)
         {
-            #region Business Rule
-
-            #endregion Business Rule
-
             var competition = await _unitOfWork.CompetitionsRepository.GetByIdAsync(id);
-
             if (competition == null)
             {
                 return new ServiceResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG);
@@ -72,22 +58,22 @@ namespace KoiShowManagement.Service
             try
             {
                 int result = -1;
+                var competitionTmp = _unitOfWork.CompetitionsRepository.GetById(competition.CompetitionId);
 
-                var competitionTmp = this.GetById(competition.CompetitionId);
-
-                if (competitionTmp.Result.Status == Const.SUCCESS_READ_CODE)
+                if (competitionTmp != null)
                 {
                     result = await _unitOfWork.CompetitionsRepository.UpdateAsync(competition);
 
                     if (result > 0)
                     {
-                        return new ServiceResult(Const.SUCCESS_UPDATE_CODE, Const.SUCCESS_UPDATE_MSG, competition);
+                        return new ServiceResult(Const.SUCCESS_CREATE_CODE, Const.SUCCESS_CREATE_MSG, competition);
                     }
                     else
                     {
-                        return new ServiceResult(Const.FAIL_UPDATE_CODE, Const.FAIL_UPDATE_MSG);
+                        return new ServiceResult(Const.FAIL_CREATE_CODE, Const.FAIL_CREATE_MSG);
                     }
                 }
+
                 else
                 {
                     result = await _unitOfWork.CompetitionsRepository.CreateAsync(competition);
@@ -113,12 +99,12 @@ namespace KoiShowManagement.Service
             try
             {
                 var result = false;
+                var competitionResult = _unitOfWork.CompetitionsRepository.GetById(id);
 
-                var competitionResult = this.GetById(id);
-
-                if (competitionResult != null && competitionResult.Result.Status == Const.SUCCESS_READ_CODE)
+                if (competitionResult != null)
                 {
-                    result = await _unitOfWork.CompetitionsRepository.RemoveAsync((Competition)competitionResult.Result.Data);
+
+                    result = await _unitOfWork.CompetitionsRepository.RemoveAsync(competitionResult);
 
                     if (result)
                     {
@@ -126,7 +112,7 @@ namespace KoiShowManagement.Service
                     }
                     else
                     {
-                        return new ServiceResult(Const.SUCCESS_DELETE_CODE, Const.SUCCESS_DELETE_MSG, competitionResult.Result.Data);
+                        return new ServiceResult(Const.FAIL_DELETE_CODE, Const.FAIL_DELETE_MSG);
                     }
                 }
                 else
@@ -142,10 +128,6 @@ namespace KoiShowManagement.Service
 
         public async Task<ServiceResult> GetCompetitionList()
         {
-            #region Business Rule
-
-            #endregion Business Rule
-
             var competition = await _unitOfWork.CompetitionsRepository.GetAllAsync();
 
             if (competition == null)
@@ -156,6 +138,7 @@ namespace KoiShowManagement.Service
             {
                 return new ServiceResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, competition);
             }
+
         }
     }
 }

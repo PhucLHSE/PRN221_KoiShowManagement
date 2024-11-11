@@ -5,134 +5,91 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 class="text-center text-primary mt-4">Competition List</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
+<p class="text-end">
+    <a asp-page="Create" class="btn btn-success btn-sm rounded shadow">
+        <i class="bi bi-plus-circle"></i> Create New Competition
+    </a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Competition[0].CompetitionName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Competition[0].Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Competition[0].Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Competition[0].StartDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Competition[0].EndDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Competition[0].Location)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Competition[0].CompetitionType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Competition[0].Status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Competition[0].NumberOfParticipants)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Competition[0].Image)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Competition[0].ContactInfo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Competition[0].ShapePointPercentage)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Competition[0].ColorPointPercentage)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Competition[0].PatternPointPercentage)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Competition[0].RulesDocument)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Competition[0].JudgingPanel)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Competition[0].MaxJudges)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Competition[0].IsDeleted)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Competition) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CompetitionName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StartDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EndDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Location)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CompetitionType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumberOfParticipants)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Image)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ContactInfo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ShapePointPercentage)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ColorPointPercentage)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PatternPointPercentage)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RulesDocument)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.JudgingPanel)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaxJudges)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsDeleted)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.CompetitionId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.CompetitionId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.CompetitionId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+<form method="get" class="row g-3 mb-3">
+    <div class="col-md-4">
+        <input type="text" name="CompetitionName" class="form-control" placeholder="Search by CompetitionName" value="@Model.CompetitionName">
+    </div>
+    <div class="col-md-4">
+        <input type="text" name="Description" class="form-control" placeholder="Search by Description" value="@Model.Description">
+    </div>
+    <div class="col-md-4">
+        <input type="text" name="Title" class="form-control" placeholder="Search by Title" value="@Model.Title">
+    </div>
+    <div class="col-md-12 text-end">
+        <button type="submit" class="btn btn-primary">
+            <i class="bi bi-search"></i> Search
+        </button>
+    </div>
+</form>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover align-middle shadow-sm">
+        <thead class="bg-secondary text-white text-center">
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Competition[0].CompetitionName)</th>
+                <th>@Html.DisplayNameFor(model => model.Competition[0].Title)</th>
+                <th>@Html.DisplayNameFor(model => model.Competition[0].Description)</th>
+                <th>@Html.DisplayNameFor(model => model.Competition[0].StartDate)</th>
+                <th>@Html.DisplayNameFor(model => model.Competition[0].EndDate)</th>
+                <th>@Html.DisplayNameFor(model => model.Competition[0].Location)</th>
+                <th>@Html.DisplayNameFor(model => model.Competition[0].CompetitionType)</th>
+                <th>@Html.DisplayNameFor(model => model.Competition[0].Status)</th>
+                <th>@Html.DisplayNameFor(model => model.Competition[0].NumberOfParticipants)</th>
+                <th>@Html.DisplayNameFor(model => model.Competition[0].Image)</th>
+                <th>@Html.DisplayNameFor(model => model.Competition[0].ContactInfo)</th>
+                <th>@Html.DisplayNameFor(model => model.Competition[0].ShapePointPercentage)</th>
+                <th>@Html.DisplayNameFor(model => model.Competition[0].ColorPointPercentage)</th>
+                <th>@Html.DisplayNameFor(model => model.Competition[0].PatternPointPercentage)</th>
+                <th>@Html.DisplayNameFor(model => model.Competition[0].RulesDocument)</th>
+                <th>@Html.DisplayNameFor(model => model.Competition[0].JudgingPanel)</th>
+                <th>@Html.DisplayNameFor(model => model.Competition[0].MaxJudges)</th>
+                <th>@Html.DisplayNameFor(model => model.Competition[0].IsDeleted)</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Competition)
+            {
+                <tr class="text-center">
+                    <td>@Html.DisplayFor(modelItem => item.CompetitionName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                    <td>@Html.DisplayFor(modelItem => item.StartDate)</td>
+                    <td>@Html.DisplayFor(modelItem => item.EndDate)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Location)</td>
+                    <td>@Html.DisplayFor(modelItem => item.CompetitionType)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                    <td>@Html.DisplayFor(modelItem => item.NumberOfParticipants)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Image)</td>
+                    <td>@Html.DisplayFor(modelItem => item.ContactInfo)</td>
+                    <td>@Html.DisplayFor(modelItem => item.ShapePointPercentage)</td>
+                    <td>@Html.DisplayFor(modelItem => item.ColorPointPercentage)</td>
+                    <td>@Html.DisplayFor(modelItem => item.PatternPointPercentage)</td>
+                    <td>@Html.DisplayFor(modelItem => item.RulesDocument)</td>
+                    <td>@Html.DisplayFor(modelItem => item.JudgingPanel)</td>
+                    <td>@Html.DisplayFor(modelItem => item.MaxJudges)</td>
+                    <td>@Html.DisplayFor(modelItem => item.IsDeleted)</td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.CompetitionId" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil-square"></i> Edit
+                        </a>
+                        <a asp-page="./Details" asp-route-id="@item.CompetitionId" class="btn btn-info btn-sm">
+                            <i class="bi bi-info-circle"></i> Details
+                        </a>
+                        <a asp-page="./Delete" asp-route-id="@item.CompetitionId" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i> Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
