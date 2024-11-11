@@ -1,0 +1,87 @@
+﻿@page
+@model KoiShowManagement.RazorWebApp.Pages.Feedbacks.CreateModel
+
+@{
+    ViewData["Title"] = "Create Feedback";
+}
+
+<h1>Create Feedback</h1>
+
+<h4>Feedback Details</h4>
+<hr />
+<div class="row">
+    <div class="col-md-8">
+        <form method="post" class="border rounded p-4 shadow-sm bg-light">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.CompetitionId" class="form-label fw-bold"></label>
+                <select asp-for="Feedback.CompetitionId" class="form-control" asp-items="ViewBag.CompetitionId"></select>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.UserId" class="form-label fw-bold"></label>
+                <select asp-for="Feedback.UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.Rating" class="form-label fw-bold"></label>
+                <input asp-for="Feedback.Rating" class="form-control" />
+                <span asp-validation-for="Feedback.Rating" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.Comments" class="form-label fw-bold"></label>
+                <input asp-for="Feedback.Comments" class="form-control" />
+                <span asp-validation-for="Feedback.Comments" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.Response" class="form-label fw-bold"></label>
+                <input asp-for="Feedback.Response" class="form-control" />
+                <span asp-validation-for="Feedback.Response" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.ResponseDate" class="form-label fw-bold"></label>
+                <input asp-for="Feedback.ResponseDate" class="form-control" />
+                <span asp-validation-for="Feedback.ResponseDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.FeedbackType" class="form-label fw-bold"></label>
+                <input asp-for="Feedback.FeedbackType" class="form-control" />
+                <span asp-validation-for="Feedback.FeedbackType" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.VisibilityLevel" class="form-label fw-bold"></label>
+                <input asp-for="Feedback.VisibilityLevel" class="form-control" />
+                <span asp-validation-for="Feedback.VisibilityLevel" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.SeverityLevel" class="form-label fw-bold"></label>
+                <input asp-for="Feedback.SeverityLevel" class="form-control" />
+                <span asp-validation-for="Feedback.SeverityLevel" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.Platform" class="form-label fw-bold"></label>
+                <input asp-for="Feedback.Platform" class="form-control" />
+                <span asp-validation-for="Feedback.Platform" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-page="Index" class="btn btn-secondary ms-2">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

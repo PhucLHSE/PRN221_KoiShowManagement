@@ -2,114 +2,138 @@
 @model KoiShowManagement.RazorWebApp.Pages.Registrations.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Registrations";
 }
 
-<h1>Index</h1>
+<div class="container my-5">
+    <h1 class="text-center text-primary mb-4">Registrations</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Registration[0].EntryTitle)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Registration[0].CheckInStatus)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Registration[0].RegistrationDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Registration[0].ApprovalStatus)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Registration[0].Notes)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Registration[0].Image)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Registration[0].HealthStatus)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Registration[0].Color)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Registration[0].Shape)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Registration[0].Pattern)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Registration[0].IsDeleted)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Registration[0].Animal)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Registration[0].Competition)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Registration[0].User)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Registration)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.EntryTitle)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CheckInStatus)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.RegistrationDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ApprovalStatus)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Notes)
-                </td>
-                <td>
-                    <img src="@item.Image" alt="Registration Image" style="max-width: 150px; max-height: 150px;" />
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.HealthStatus)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Color)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Shape)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Pattern)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsDeleted)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Animal.AnimalId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Competition.CompetitionId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.User.Email)
-                </td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@item.RegistrationId">Edit</a> |
-                    <a asp-page="./Details" asp-route-id="@item.RegistrationId">Details</a> |
-                    <a asp-page="./Delete" asp-route-id="@item.RegistrationId">Delete</a>
-                </td>
-            </tr>
+    <form method="get" class="search-form">
+        <div class="form-group">
+            <label>Pattern:</label>
+            <input type="text" asp-for="SearchT" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>EntryTitle:</label>
+            <input type="text" asp-for="SearchTT" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Color:</label>
+            <input type="text" asp-for="SearchTTT" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    <div class="d-flex justify-content-end mb-4">
+        <a asp-page="Create" class="btn btn-success shadow rounded-pill px-4 py-2">+ Add New Registration</a>
+    </div>
+
+    <div class="card border-0 shadow-sm rounded-4">
+        <div class="card-body p-4">
+            <table class="table table-striped table-hover align-middle mb-0">
+                <thead class="bg-primary text-white rounded-4">
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Registration[0].EntryTitle)</th>
+                        <th>@Html.DisplayNameFor(model => model.Registration[0].CheckInStatus)</th>
+                        <th>@Html.DisplayNameFor(model => model.Registration[0].RegistrationDate)</th>
+                        <th>@Html.DisplayNameFor(model => model.Registration[0].ApprovalStatus)</th>
+                        <th>@Html.DisplayNameFor(model => model.Registration[0].Notes)</th>
+                        <th>@Html.DisplayNameFor(model => model.Registration[0].Image)</th>
+                        <th>@Html.DisplayNameFor(model => model.Registration[0].HealthStatus)</th>
+                        <th>@Html.DisplayNameFor(model => model.Registration[0].Color)</th>
+                        <th>@Html.DisplayNameFor(model => model.Registration[0].Shape)</th>
+                        <th>@Html.DisplayNameFor(model => model.Registration[0].Pattern)</th>
+                        <th>@Html.DisplayNameFor(model => model.Registration[0].IsDeleted)</th>
+                        <th>@Html.DisplayNameFor(model => model.Registration[0].Animal)</th>
+                        <th>@Html.DisplayNameFor(model => model.Registration[0].Competition)</th>
+                        <th>@Html.DisplayNameFor(model => model.Registration[0].User)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Registration)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.EntryTitle)</td>
+                            <td>@Html.DisplayFor(modelItem => item.CheckInStatus)</td>
+                            <td>@Html.DisplayFor(modelItem => item.RegistrationDate)</td>
+                            <td>@Html.DisplayFor(modelItem => item.ApprovalStatus)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Notes)</td>
+                            <td>
+                                <img src="@item.Image" alt="Registration Image" class="img-thumbnail shadow-sm rounded-circle" style="max-width: 70px; max-height: 70px; object-fit: cover;" />
+                            </td>
+                            <td>@Html.DisplayFor(modelItem => item.HealthStatus)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Color)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Shape)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Pattern)</td>
+                            <td>@Html.DisplayFor(modelItem => item.IsDeleted)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Animal.AnimalId)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Competition.CompetitionId)</td>
+                            <td>@Html.DisplayFor(modelItem => item.User.Email)</td>
+                            <td>
+                                <div class="d-flex gap-2">
+                                    <a asp-page="./Edit" asp-route-id="@item.RegistrationId" class="btn btn-outline-warning btn-sm rounded-pill">Edit</a>
+                                    <a asp-page="./Details" asp-route-id="@item.RegistrationId" class="btn btn-outline-info btn-sm rounded-pill">Details</a>
+                                    <a asp-page="./Delete" asp-route-id="@item.RegistrationId" class="btn btn-outline-danger btn-sm rounded-pill">Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<style>
+
+    /* Phần form tìm kiếm */
+    form {
+        background-color: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1.5rem;
+    }
+
+        form div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
         }
-    </tbody>
-</table>
+
+        form label {
+            width: 100px;
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        form input[type="text"] {
+            flex: 1;
+            padding: 0.5rem;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            transition: border-color 0.2s;
+        }
+
+            form input[type="text"]:focus {
+                border-color: #80bdff;
+                outline: none;
+                box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+            }
+
+        form button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+            form button[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+
+
+</style>

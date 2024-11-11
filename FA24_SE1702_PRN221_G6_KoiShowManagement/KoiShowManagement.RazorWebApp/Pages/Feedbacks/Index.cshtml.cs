@@ -9,14 +9,17 @@ using KoiShowManagement.Data.DBContext;
 using KoiShowManagement.Data.Models;
 using KoiShowManagement.Service;
 
-namespace KoiShowManagement.RazorWebApp.Pages.Registrations
+namespace KoiShowManagement.RazorWebApp.Pages.Feedbacks
 {
     public class IndexModel : PageModel
     {
-        private readonly RegistrationService _registrationService;
+        // private readonly KoiShowManagement.Data.DBContext.FA24_SE1702_PRN221_G6_KoiShowManagementContext _context;
+        private readonly FeedbackService _feedbackService;
 
-        public IndexModel(RegistrationService registrationService) => _registrationService = registrationService;
-        public IList<Registration> Registration { get; set; } = default!;
+         public IndexModel(FeedbackService feedbackService)=> _feedbackService = feedbackService;
+
+        public IList<Feedback> Feedback { get;set; } = default!;
+
 
         [BindProperty(SupportsGet = true)]
         public string? SearchT { get; set; } = string.Empty;
@@ -26,14 +29,12 @@ namespace KoiShowManagement.RazorWebApp.Pages.Registrations
 
         [BindProperty(SupportsGet = true)]
         public string? SearchTTT { get; set; } = string.Empty;
-
         public async Task OnGetAsync()
         {
+          
+           //Feedback = (await _feedbackService.GetAll()).Data as IList<Feedback>;
 
-            //Registration = (await _registrationService.GetAll()).Data as IList<Registration>;
-
-            Registration = (await _registrationService.searchString(SearchT, SearchTT, SearchTTT)).Data as IList<Registration>;
-
+            Feedback = (await _feedbackService.SearchString(SearchT, SearchTT, SearchTTT)).Data as IList<Feedback>;
 
         }
     }

@@ -7,15 +7,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using KoiShowManagement.Data.Repository;
 
 namespace KoiShowManagement.Service
 {
-    public interface IRegistrationService
+    public interface IFeedBackService
     {
         Task<ServiceResult> GetAll();
         Task<ServiceResult> GetById(int id);
-        Task<ServiceResult> Save(Registration registration);
+        Task<ServiceResult> Save(Feedback feedback);
         Task<ServiceResult> DeleteById(int id);
 
         Task<ServiceResult> GetAnimalsList();
@@ -24,82 +23,65 @@ namespace KoiShowManagement.Service
 
 
     }
-    public class RegistrationService : IRegistrationService
+    public class FeedbackService :IFeedBackService
     {
         private readonly UnitOfWork _unitOfWork;
-        public RegistrationService() => _unitOfWork = new UnitOfWork();
-    
+        public FeedbackService() => _unitOfWork = new UnitOfWork();
+
         public async Task<ServiceResult> GetAll()
         {
-            var registrations = await _unitOfWork.RegistrationsRepository.GetAllWithDetailsAsync();
+            var feedbacks = await _unitOfWork.FeedbackRepository.GetAllWithDetailsAsync();
 
-            if (registrations == null || !registrations.Any())
+            if (feedbacks == null || !feedbacks.Any())
             {
                 return new ServiceResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG);
             }
 
-            return new ServiceResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, registrations);
+            return new ServiceResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, feedbacks);
         }
 
 
-
-        public async Task<ServiceResult> searchString(string? searchT, string? searchTT, string? searchTTT)
+        public async Task<ServiceResult> SearchString(string? searchT, string? searchTT, string? searchTTT)
         {
-
-            var registrations = await _unitOfWork.RegistrationsRepository.GetAllWithDetailsAsync();
-
-
+            var feedbacks = (await _unitOfWork.FeedbackRepository.GetAllWithDetailsAsync());
             if (!string.IsNullOrWhiteSpace(searchT))
             {
-                registrations = registrations
-                    .Where(r => r.Pattern != null && r.Pattern.Contains(searchT, StringComparison.OrdinalIgnoreCase))
-                    .ToList();
-            }
+                if (int.TryParse(searchT, out int userId))
+                {
+                    feedbacks = feedbacks
+                        .Where(f => f.UserId == userId)
+                        .ToList();
+                }
 
+            }
 
             if (!string.IsNullOrWhiteSpace(searchTT))
             {
-                registrations = registrations
-                    .Where(r => r.EntryTitle != null && r.EntryTitle.Contains(searchTT, StringComparison.OrdinalIgnoreCase))
+                feedbacks = feedbacks
+                    .Where(f => f.Comments != null && f.Comments.Contains(searchTTT, StringComparison.OrdinalIgnoreCase))
                     .ToList();
             }
 
             if (!string.IsNullOrWhiteSpace(searchTTT))
             {
-                registrations = registrations
-                    .Where(r => r.Color != null && r.Color.Contains(searchTTT, StringComparison.OrdinalIgnoreCase))
-                    .ToList();
-            }
+                if (int.TryParse(searchTTT, out int rating))
+                {
+                    feedbacks = feedbacks
+                        .Where(f => f.Rating == rating)
+                        .ToList();
+                }
 
-            if (registrations.Any())
+            }
+            if (feedbacks.Any())
             {
-                return new ServiceResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, registrations);
+                return new ServiceResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, feedbacks);
             }
             else
             {
                 return new ServiceResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG, new List<Registration>());
             }
+
         }
-
-
-
-        public async Task<ServiceResult> GetAnimalsList()
-        {
-            #region Business Rule
-
-            #endregion Business Rule
-
-            var animals = await _unitOfWork.AnimalRepository.GetAllAsync();
-            if (animals == null)
-            {
-                return new ServiceResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG);
-            }
-            else
-            {
-                return new ServiceResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, animals);
-            }
-        }
-
         public async Task<ServiceResult> GetCompetitionsList()
         {
             #region Business Rule
@@ -141,17 +123,17 @@ namespace KoiShowManagement.Service
             #region Business Rule
 
             #endregion Business Rule
-            var registration = await _unitOfWork.RegistrationsRepository.GetByIdWithDetailsAsync(id);
-            if (registration == null)
+            var feedback = await _unitOfWork.FeedbackRepository.GetByIdWithDetailsAsync(id);
+            if (feedback == null)
             {
                 return new ServiceResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG);
             }
             else
             {
-                return new ServiceResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, registration);
+                return new ServiceResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, feedback);
             }
         }
-        public async Task<ServiceResult> Save(Registration registration)
+        public async Task<ServiceResult> Save(Feedback feedback)
         {
             try
             {
@@ -159,15 +141,15 @@ namespace KoiShowManagement.Service
 
                 #endregion Business Rule
                 int result = -1;
-                var registrationTmp = _unitOfWork.RegistrationsRepository.GetById(registration.RegistrationId);
+                var feedbackTmp = _unitOfWork.FeedbackRepository.GetById(feedback.FeedbackId);
 
 
-                if (registrationTmp != null)
+                if (feedbackTmp != null)
                 {
-                    result = await _unitOfWork.RegistrationsRepository.UpdateAsync(registration);
+                    result = await _unitOfWork.FeedbackRepository.UpdateAsync(feedback);
                     if (result > 0)
                     {
-                        return new ServiceResult(Const.SUCCESS_UPDATE_CODE, Const.SUCCESS_UPDATE_MSG, registration);
+                        return new ServiceResult(Const.SUCCESS_UPDATE_CODE, Const.SUCCESS_UPDATE_MSG, feedback);
                     }
                     else
                     {
@@ -176,10 +158,10 @@ namespace KoiShowManagement.Service
                 }
                 else
                 {
-                    result = await _unitOfWork.RegistrationsRepository.CreateAsync(registration);
+                    result = await _unitOfWork.FeedbackRepository.CreateAsync(feedback);
                     if (result > 0)
                     {
-                        return new ServiceResult(Const.SUCCESS_CREATE_CODE, Const.SUCCESS_CREATE_MSG, registration);
+                        return new ServiceResult(Const.SUCCESS_CREATE_CODE, Const.SUCCESS_CREATE_MSG, feedback);
                     }
                     else
                     {
@@ -200,19 +182,19 @@ namespace KoiShowManagement.Service
             try
             {
                 var result = false;
-                var registrationResult = _unitOfWork.RegistrationsRepository.GetById(id);
+                var feedbacknResult = _unitOfWork.FeedbackRepository.GetById(id);
 
-                if (registrationResult != null)
+                if (feedbacknResult != null)
                 {
-                    result = await _unitOfWork.RegistrationsRepository.RemoveAsync(registrationResult);
+                    result = await _unitOfWork.FeedbackRepository.RemoveAsync(feedbacknResult);
 
                     if (result)
                     {
-                        return new ServiceResult(Const.SUCCESS_DELETE_CODE, Const.SUCCESS_DELETE_MSG, registrationResult);
+                        return new ServiceResult(Const.SUCCESS_DELETE_CODE, Const.SUCCESS_DELETE_MSG, feedbacknResult);
                     }
                     else
                     {
-                        return new ServiceResult(Const.FAIL_DELETE_CODE, Const.FAIL_DELETE_MSG, registrationResult);
+                        return new ServiceResult(Const.FAIL_DELETE_CODE, Const.FAIL_DELETE_MSG, feedbacknResult);
                     }
                 }
                 else
@@ -227,8 +209,9 @@ namespace KoiShowManagement.Service
             }
         }
 
-
-
-
+        public Task<ServiceResult> GetAnimalsList()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

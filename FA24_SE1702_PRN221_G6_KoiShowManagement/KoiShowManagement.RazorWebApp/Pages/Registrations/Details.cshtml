@@ -5,9 +5,9 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1 class="text-primary">Details</h1>
 
-<div>
+<div class="bg-light p-3 rounded">
     <h4>Registration</h4>
     <hr />
     <dl class="row">
@@ -17,30 +17,35 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Registration.EntryTitle)
         </dd>
+
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Registration.CheckInStatus)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Registration.CheckInStatus)
         </dd>
+
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Registration.RegistrationDate)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Registration.RegistrationDate)
         </dd>
+
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Registration.ApprovalStatus)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Registration.ApprovalStatus)
         </dd>
+
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Registration.Notes)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Registration.Notes)
         </dd>
+
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Registration.Image)
         </dt>
@@ -54,48 +59,56 @@
                 <p>No image available</p>
             }
         </dd>
+
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Registration.HealthStatus)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Registration.HealthStatus)
         </dd>
+
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Registration.Color)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Registration.Color)
         </dd>
+
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Registration.Shape)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Registration.Shape)
         </dd>
+
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Registration.Pattern)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Registration.Pattern)
         </dd>
+
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Registration.IsDeleted)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Registration.IsDeleted)
         </dd>
+
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Registration.Animal)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Registration.Animal.AnimalId)
         </dd>
+
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Registration.Competition)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Registration.Competition.CompetitionId)
         </dd>
+
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Registration.User)
         </dt>
@@ -104,7 +117,8 @@
         </dd>
     </dl>
 </div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.Registration.RegistrationId">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+
+<div class="mt-3">
+    <a asp-page="./Edit" asp-route-id="@Model.Registration.RegistrationId" class="btn btn-warning">Edit</a> |
+    <a asp-page="./Index" class="btn btn-secondary">Back to List</a>
 </div>

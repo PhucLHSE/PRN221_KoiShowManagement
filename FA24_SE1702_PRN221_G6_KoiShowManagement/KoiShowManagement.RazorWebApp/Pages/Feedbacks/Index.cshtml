@@ -1,0 +1,85 @@
+﻿@page
+@model KoiShowManagement.RazorWebApp.Pages.Feedbacks.IndexModel
+
+@{
+    ViewData["Title"] = "Feedbacks";
+}
+
+<div class="container my-5">
+    <h1 class="text-center text-primary mb-4">Feedbacks</h1>
+    <form method="get" class="search-form">
+        <div class="form-group">
+            <label>UserId:</label>
+            <input type="text" asp-for="SearchT" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Comments:</label>
+            <input type="text" asp-for="SearchTT" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Rating:</label>
+            <input type="text" asp-for="SearchTTT" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    <div class="d-flex justify-content-end mb-4">
+        <a asp-page="Create" class="btn btn-success shadow rounded-pill px-4 py-2">+ Add New Feedback</a>
+    </div>
+
+    <div class="card border-0 shadow-sm rounded-4">
+        <div class="card-body p-4">
+            <table class="table table-striped table-hover align-middle mb-0">
+                <thead class="bg-primary text-white rounded-4">
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Feedback[0].Rating)</th>
+                        <th>@Html.DisplayNameFor(model => model.Feedback[0].Comments)</th>
+                        <th>@Html.DisplayNameFor(model => model.Feedback[0].FeedbackDate)</th>
+                        <th>@Html.DisplayNameFor(model => model.Feedback[0].IsDeleted)</th>
+                        <th>@Html.DisplayNameFor(model => model.Feedback[0].Response)</th>
+                        <th>@Html.DisplayNameFor(model => model.Feedback[0].ResponseDate)</th>
+                        <th>@Html.DisplayNameFor(model => model.Feedback[0].FeedbackType)</th>
+                        <th>@Html.DisplayNameFor(model => model.Feedback[0].Status)</th>
+                        <th>@Html.DisplayNameFor(model => model.Feedback[0].IsAnonymous)</th>
+                        <th>@Html.DisplayNameFor(model => model.Feedback[0].VisibilityLevel)</th>
+                        <th>@Html.DisplayNameFor(model => model.Feedback[0].SeverityLevel)</th>
+                        <th>@Html.DisplayNameFor(model => model.Feedback[0].IsResponded)</th>
+                        <th>@Html.DisplayNameFor(model => model.Feedback[0].Platform)</th>
+                        <th>@Html.DisplayNameFor(model => model.Feedback[0].Competition)</th>
+                        <th>@Html.DisplayNameFor(model => model.Feedback[0].User)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Feedback)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Rating)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Comments)</td>
+                            <td>@Html.DisplayFor(modelItem => item.FeedbackDate)</td>
+                            <td>@Html.DisplayFor(modelItem => item.IsDeleted)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Response)</td>
+                            <td>@Html.DisplayFor(modelItem => item.ResponseDate)</td>
+                            <td>@Html.DisplayFor(modelItem => item.FeedbackType)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                            <td>@Html.DisplayFor(modelItem => item.IsAnonymous)</td>
+                            <td>@Html.DisplayFor(modelItem => item.VisibilityLevel)</td>
+                            <td>@Html.DisplayFor(modelItem => item.SeverityLevel)</td>
+                            <td>@Html.DisplayFor(modelItem => item.IsResponded)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Platform)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Competition.CompetitionId)</td>
+                            <td>@Html.DisplayFor(modelItem => item.User.Email)</td>
+                            <td>
+                                <div class="d-flex gap-2">
+                                    <a asp-page="./Edit" asp-route-id="@item.FeedbackId" class="btn btn-outline-warning btn-sm rounded-pill">Edit</a>
+                                    <a asp-page="./Details" asp-route-id="@item.FeedbackId" class="btn btn-outline-info btn-sm rounded-pill">Details</a>
+                                    <a asp-page="./Delete" asp-route-id="@item.FeedbackId" class="btn btn-outline-danger btn-sm rounded-pill">Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

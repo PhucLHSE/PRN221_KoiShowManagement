@@ -2,90 +2,103 @@
 @model KoiShowManagement.RazorWebApp.Pages.Registrations.CreateModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Create Registration";
 }
 
-<h1>Create</h1>
+<h1 class="text-center text-primary">Create Registration</h1>
 
-<h4>Registration</h4>
+<h4 class="text-secondary">Registration Details</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Registration.CompetitionId" class="control-label"></label>
-                <select asp-for="Registration.CompetitionId" class ="form-control" asp-items="ViewBag.CompetitionId"></select>
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <form method="post" enctype="multipart/form-data" class="border rounded p-4 shadow-sm bg-light">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Registration.CompetitionId" class="form-label fw-bold text-success"></label>
+                <select asp-for="Registration.CompetitionId" class="form-control" asp-items="ViewBag.CompetitionId"></select>
             </div>
-            <div class="form-group">
-                <label asp-for="Registration.AnimalId" class="control-label"></label>
-                <select asp-for="Registration.AnimalId" class ="form-control" asp-items="ViewBag.AnimalId"></select>
+
+            <div class="form-group mb-3">
+                <label asp-for="Registration.AnimalId" class="form-label fw-bold text-success"></label>
+                <select asp-for="Registration.AnimalId" class="form-control" asp-items="ViewBag.AnimalId"></select>
             </div>
-            <div class="form-group">
-                <label asp-for="Registration.UserId" class="control-label"></label>
-                <select asp-for="Registration.UserId" class ="form-control" asp-items="ViewBag.UserId"></select>
+
+            <div class="form-group mb-3">
+                <label asp-for="Registration.UserId" class="form-label fw-bold text-success"></label>
+                <select asp-for="Registration.UserId" class="form-control" asp-items="ViewBag.UserId"></select>
             </div>
-            <div class="form-group">
-                <label asp-for="Registration.EntryTitle" class="control-label"></label>
+
+            <div class="form-group mb-3">
+                <label asp-for="Registration.EntryTitle" class="form-label fw-bold text-success"></label>
                 <input asp-for="Registration.EntryTitle" class="form-control" />
                 <span asp-validation-for="Registration.EntryTitle" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Registration.CheckInStatus" class="control-label"></label>
+
+            <div class="form-group mb-3">
+                <label asp-for="Registration.CheckInStatus" class="form-label fw-bold text-success"></label>
                 <input asp-for="Registration.CheckInStatus" class="form-control" />
                 <span asp-validation-for="Registration.CheckInStatus" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Registration.RegistrationDate" class="control-label"></label>
+
+            <div class="form-group mb-3">
+                <label asp-for="Registration.RegistrationDate" class="form-label fw-bold text-success"></label>
                 <input asp-for="Registration.RegistrationDate" class="form-control" />
                 <span asp-validation-for="Registration.RegistrationDate" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Registration.ApprovalStatus" class="control-label"></label>
+
+            <div class="form-group mb-3">
+                <label asp-for="Registration.ApprovalStatus" class="form-label fw-bold text-success"></label>
                 <input asp-for="Registration.ApprovalStatus" class="form-control" />
                 <span asp-validation-for="Registration.ApprovalStatus" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Registration.Notes" class="control-label"></label>
+
+            <div class="form-group mb-3">
+                <label asp-for="Registration.Notes" class="form-label fw-bold text-success"></label>
                 <input asp-for="Registration.Notes" class="form-control" />
                 <span asp-validation-for="Registration.Notes" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Registration.ImageFile" class="control-label"></label>
+
+            <div class="form-group mb-3">
+                <label asp-for="Registration.ImageFile" class="form-label fw-bold text-success"></label>
                 <input asp-for="Registration.ImageFile" class="form-control" type="file" />
                 <span asp-validation-for="Registration.ImageFile" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Registration.HealthStatus" class="control-label"></label>
+
+            <div class="form-group mb-3">
+                <label asp-for="Registration.HealthStatus" class="form-label fw-bold text-success"></label>
                 <input asp-for="Registration.HealthStatus" class="form-control" />
                 <span asp-validation-for="Registration.HealthStatus" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Registration.Color" class="control-label"></label>
+
+            <div class="form-group mb-3">
+                <label asp-for="Registration.Color" class="form-label fw-bold text-success"></label>
                 <input asp-for="Registration.Color" class="form-control" />
                 <span asp-validation-for="Registration.Color" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Registration.Shape" class="control-label"></label>
+
+            <div class="form-group mb-3">
+                <label asp-for="Registration.Shape" class="form-label fw-bold text-success"></label>
                 <input asp-for="Registration.Shape" class="form-control" />
                 <span asp-validation-for="Registration.Shape" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Registration.Pattern" class="control-label"></label>
+
+            <div class="form-group mb-3">
+                <label asp-for="Registration.Pattern" class="form-label fw-bold text-success"></label>
                 <input asp-for="Registration.Pattern" class="form-control" />
                 <span asp-validation-for="Registration.Pattern" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-success" />
+                <a asp-page="Index" class="btn btn-secondary ms-2">Back to List</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-page="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

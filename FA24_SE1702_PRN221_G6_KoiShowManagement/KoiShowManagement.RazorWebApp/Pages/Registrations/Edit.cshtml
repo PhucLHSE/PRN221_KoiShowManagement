@@ -5,96 +5,115 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1 class="text-primary">Edit Registration</h1>
 
-<h4>Registration</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Registration.RegistrationId" />
-            <div class="form-group">
-                <label asp-for="Registration.CompetitionId" class="control-label"></label>
-                <select asp-for="Registration.CompetitionId" class="form-control" asp-items="ViewBag.CompetitionId"></select>
-                <span asp-validation-for="Registration.CompetitionId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Registration.AnimalId" class="control-label"></label>
-                <select asp-for="Registration.AnimalId" class="form-control" asp-items="ViewBag.AnimalId"></select>
-                <span asp-validation-for="Registration.AnimalId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Registration.UserId" class="control-label"></label>
-                <select asp-for="Registration.UserId" class="form-control" asp-items="ViewBag.UserId"></select>
-                <span asp-validation-for="Registration.UserId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Registration.EntryTitle" class="control-label"></label>
-                <input asp-for="Registration.EntryTitle" class="form-control" />
-                <span asp-validation-for="Registration.EntryTitle" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Registration.CheckInStatus" class="control-label"></label>
-                <input asp-for="Registration.CheckInStatus" class="form-control" />
-                <span asp-validation-for="Registration.CheckInStatus" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Registration.RegistrationDate" class="control-label"></label>
-                <input asp-for="Registration.RegistrationDate" class="form-control" />
-                <span asp-validation-for="Registration.RegistrationDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Registration.ApprovalStatus" class="control-label"></label>
-                <input asp-for="Registration.ApprovalStatus" class="form-control" />
-                <span asp-validation-for="Registration.ApprovalStatus" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Registration.Notes" class="control-label"></label>
-                <input asp-for="Registration.Notes" class="form-control" />
-                <span asp-validation-for="Registration.Notes" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Registration.ImageFile" class="control-label"></label>
-                <input asp-for="Registration.ImageFile" class="form-control" type="file" />
-                <span asp-validation-for="Registration.ImageFile" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Registration.HealthStatus" class="control-label"></label>
-                <input asp-for="Registration.HealthStatus" class="form-control" />
-                <span asp-validation-for="Registration.HealthStatus" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Registration.Color" class="control-label"></label>
-                <input asp-for="Registration.Color" class="form-control" />
-                <span asp-validation-for="Registration.Color" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Registration.Shape" class="control-label"></label>
-                <input asp-for="Registration.Shape" class="form-control" />
-                <span asp-validation-for="Registration.Shape" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Registration.Pattern" class="control-label"></label>
-                <input asp-for="Registration.Pattern" class="form-control" />
-                <span asp-validation-for="Registration.Pattern" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Registration.IsDeleted" class="control-label"></label>
-                <input asp-for="Registration.IsDeleted" class="form-control" />
-                <span asp-validation-for="Registration.IsDeleted" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="bg-light p-4 rounded">
+    <h4>Registration Details</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-6">
+            <form method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Registration.RegistrationId" />
+
+                <div class="form-group mb-3">
+                    <label asp-for="Registration.CompetitionId" class="form-label"></label>
+                    <select asp-for="Registration.CompetitionId" class="form-select" asp-items="ViewBag.CompetitionId"></select>
+                    <span asp-validation-for="Registration.CompetitionId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Registration.AnimalId" class="form-label"></label>
+                    <select asp-for="Registration.AnimalId" class="form-select" asp-items="ViewBag.AnimalId"></select>
+                    <span asp-validation-for="Registration.AnimalId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Registration.UserId" class="form-label"></label>
+                    <select asp-for="Registration.UserId" class="form-select" asp-items="ViewBag.UserId"></select>
+                    <span asp-validation-for="Registration.UserId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Registration.EntryTitle" class="form-label"></label>
+                    <input asp-for="Registration.EntryTitle" class="form-control" />
+                    <span asp-validation-for="Registration.EntryTitle" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Registration.CheckInStatus" class="form-label"></label>
+                    <input asp-for="Registration.CheckInStatus" class="form-control" />
+                    <span asp-validation-for="Registration.CheckInStatus" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Registration.RegistrationDate" class="form-label"></label>
+                    <input asp-for="Registration.RegistrationDate" class="form-control" />
+                    <span asp-validation-for="Registration.RegistrationDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Registration.ApprovalStatus" class="form-label"></label>
+                    <input asp-for="Registration.ApprovalStatus" class="form-control" />
+                    <span asp-validation-for="Registration.ApprovalStatus" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Registration.Notes" class="form-label"></label>
+                    <input asp-for="Registration.Notes" class="form-control" />
+                    <span asp-validation-for="Registration.Notes" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Registration.ImageFile" class="form-label"></label>
+                    <input asp-for="Registration.ImageFile" class="form-control" type="file" />
+                    <span asp-validation-for="Registration.ImageFile" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Registration.HealthStatus" class="form-label"></label>
+                    <input asp-for="Registration.HealthStatus" class="form-control" />
+                    <span asp-validation-for="Registration.HealthStatus" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Registration.Color" class="form-label"></label>
+                    <input asp-for="Registration.Color" class="form-control" />
+                    <span asp-validation-for="Registration.Color" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Registration.Shape" class="form-label"></label>
+                    <input asp-for="Registration.Shape" class="form-control" />
+                    <span asp-validation-for="Registration.Shape" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Registration.Pattern" class="form-label"></label>
+                    <input asp-for="Registration.Pattern" class="form-control" />
+                    <span asp-validation-for="Registration.Pattern" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Registration.IsDeleted" class="form-label"></label>
+                    <input asp-for="Registration.IsDeleted" class="form-control" />
+                    <span asp-validation-for="Registration.IsDeleted" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-page="./Index">Back to List</a>
+<div class="mt-3">
+    <a asp-page="./Index" class="btn btn-secondary">Back to List</a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

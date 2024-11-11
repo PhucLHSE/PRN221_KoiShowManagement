@@ -1,0 +1,142 @@
+﻿@page
+@model KoiShowManagement.RazorWebApp.Pages.Feedbacks.EditModel
+
+@{
+    ViewData["Title"] = "Edit Feedback";
+}
+
+<h1 class="text-primary">Edit Feedback</h1>
+
+<h4>Feedback Details</h4>
+<hr class="mb-4" />
+
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <form method="post" class="bg-light p-4 rounded shadow-sm">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+            <input type="hidden" asp-for="Feedback.FeedbackId" />
+
+            <h5 class="text-secondary">Basic Information</h5>
+            <hr class="mb-4" />
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.CompetitionId" class="control-label"></label>
+                <select asp-for="Feedback.CompetitionId" class="form-control" asp-items="ViewBag.CompetitionId"></select>
+                <span asp-validation-for="Feedback.CompetitionId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.UserId" class="control-label"></label>
+                <select asp-for="Feedback.UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                <span asp-validation-for="Feedback.UserId" class="text-danger"></span>
+            </div>
+
+            <h5 class="text-secondary">Feedback Content</h5>
+            <hr class="mb-4" />
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.Rating" class="control-label"></label>
+                <input asp-for="Feedback.Rating" class="form-control" type="number" min="1" max="5" />
+                <span asp-validation-for="Feedback.Rating" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.Comments" class="control-label"></label>
+                <textarea asp-for="Feedback.Comments" class="form-control" rows="4"></textarea>
+                <span asp-validation-for="Feedback.Comments" class="text-danger"></span>
+            </div>
+
+            <h5 class="text-secondary">Additional Details</h5>
+            <hr class="mb-4" />
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.FeedbackDate" class="control-label"></label>
+                <input asp-for="Feedback.FeedbackDate" class="form-control" type="date" />
+                <span asp-validation-for="Feedback.FeedbackDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.IsDeleted" class="control-label"></label>
+                <select asp-for="Feedback.IsDeleted" class="form-control">
+                    <option value="false">No</option>
+                    <option value="true">Yes</option>
+                </select>
+                <span asp-validation-for="Feedback.IsDeleted" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.Response" class="control-label"></label>
+                <textarea asp-for="Feedback.Response" class="form-control" rows="4"></textarea>
+                <span asp-validation-for="Feedback.Response" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.ResponseDate" class="control-label"></label>
+                <input asp-for="Feedback.ResponseDate" class="form-control" type="date" />
+                <span asp-validation-for="Feedback.ResponseDate" class="text-danger"></span>
+            </div>
+
+            <h5 class="text-secondary">Feedback Settings</h5>
+            <hr class="mb-4" />
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.FeedbackType" class="control-label"></label>
+                <input asp-for="Feedback.FeedbackType" class="form-control" />
+                <span asp-validation-for="Feedback.FeedbackType" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.Status" class="control-label"></label>
+                <input asp-for="Feedback.Status" class="form-control" />
+                <span asp-validation-for="Feedback.Status" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.IsAnonymous" class="control-label"></label>
+                <select asp-for="Feedback.IsAnonymous" class="form-control">
+                    <option value="false">No</option>
+                    <option value="true">Yes</option>
+                </select>
+                <span asp-validation-for="Feedback.IsAnonymous" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.VisibilityLevel" class="control-label"></label>
+                <input asp-for="Feedback.VisibilityLevel" class="form-control" />
+                <span asp-validation-for="Feedback.VisibilityLevel" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.SeverityLevel" class="control-label"></label>
+                <input asp-for="Feedback.SeverityLevel" class="form-control" />
+                <span asp-validation-for="Feedback.SeverityLevel" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.IsResponded" class="control-label"></label>
+                <select asp-for="Feedback.IsResponded" class="form-control">
+                    <option value="false">No</option>
+                    <option value="true">Yes</option>
+                </select>
+                <span asp-validation-for="Feedback.IsResponded" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Feedback.Platform" class="control-label"></label>
+                <input asp-for="Feedback.Platform" class="form-control" />
+                <span asp-validation-for="Feedback.Platform" class="text-danger"></span>
+            </div>
+
+            <div class="form-group text-center mt-4">
+                <input type="submit" value="Save" class="btn btn-primary px-5" />
+                <a asp-page="./Index" class="btn btn-secondary ms-3">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

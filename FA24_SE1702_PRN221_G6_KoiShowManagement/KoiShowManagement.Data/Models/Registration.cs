@@ -27,7 +27,7 @@ public partial class Registration
 
     public string Notes { get; set; }
 
-    [NotMapped] // Để Entity Framework không lưu trữ thuộc tính này vào DB
+    [NotMapped] 
     public IFormFile? ImageFile { get; set; }
     public string Image { get; set; }
 

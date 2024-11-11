@@ -72,6 +72,7 @@ namespace KoiShowManagement.RazorWebApp.Pages.Registrations
 
                 Registration.Image = "/images/" + fileName;
             }
+          
 
 
             await _registrationService.Save(Registration);
